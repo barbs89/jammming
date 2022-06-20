@@ -8,12 +8,11 @@ class TrackList extends React.Component {
 	render() {
 		return (
 			<div className="TrackList">
-					<Track />
-					<Track />
-					<Track />
-					<Track />
-					<Track />
-					<Track />
+					{
+						this.props.searchResults.map(track => {
+							return <Track key={track.id} track={track} />
+						})
+					}
 			</div>
 		)
 	}
