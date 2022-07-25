@@ -21,9 +21,47 @@ class App extends React.Component {
 					name: 'Summer of 69',
 					artist: 'Bryan Adams',
 					album: '18 til I die'
+				},
+				{
+					id: 3,
+					name: 'I Belong to You',
+					artist: 'Jacob Lee',
+					album: 'Wedding'
+				}, 
+				{
+					id: 4,
+					name: 'All of Me',
+					artist: 'John Legend',
+					album: 'Romantic Album'
+				}
+			],
+			playListName: 'defaultName',
+			playListTracks: [
+				{
+					id: 1,
+					name: 'Running Up That Hill',
+					artist: 'Placebo',
+					album: 'Covers'
+				}, 
+				{
+					id: 2,
+					name: 'Summer of 69',
+					artist: 'Bryan Adams',
+					album: '18 til I die'
 				}
 			]
-		}		
+		}
+		this.addTrack = this.addTrack.bind(this);
+		
+	}
+
+	addTrack(track) {
+		let tracks = this.state.playListTracks;
+		if (tracks.find(savedTrack => savedTrack.id === track.id)) {
+			return;
+		}
+		tracks.push(track)
+		this.setState({ playListTracks: tracks });
 	}
 
 	render() {
@@ -33,8 +71,8 @@ class App extends React.Component {
 				<div className="App">
 					<SearchBar />
 					<div className="App-playlist">
-						<SearchResults searchResults={this.state.searchResults} />
-						<Playlist />
+						<SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
+						<Playlist playListName={this.state.playListName} playListTracks={this.state.playListTracks} />
 					</div>
 				</div>
 			</div>
