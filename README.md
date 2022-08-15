@@ -1,6 +1,6 @@
-# Jammmming
+# Jammming
 
-A simple Spotify playlist maker created as part of a Codecademy project.
+A simple Spotify playlist maker created as part of a [Codecademy](https://www.codecademy.com/) project.
 
 ## Spotify Playlist sample app
 ---
