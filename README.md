@@ -3,12 +3,10 @@
 A simple Spotify playlist maker created as part of a [Codecademy](https://www.codecademy.com/) project.
 
 ## Spotify Playlist sample app
----
 
 You can visit the app at http://night-owl.surge.sh
 
 ## To clone this project
----
 
 1. On your terminal, enter the following command:
 
@@ -23,7 +21,6 @@ $ npm start
 
 
 ## To deploy the app to Surge
----
 
 This app was deployed using Surge. For more information on getting started with Surge please [click here.](https://surge.sh/help/getting-started-with-surge).
 
@@ -52,7 +49,6 @@ This app was deployed using Surge. For more information on getting started with 
 6. visit your subdomain i.e. `http://night-owl.surge.sh`
 
 ## Improvements
----
 
 Currently, the app requires the user to enter the song/artist/album name twice before rendering the results. I would like to improve the app by ensuring the results are shown on the first input from the user.
 
